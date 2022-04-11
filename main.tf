@@ -9,6 +9,8 @@ resource "tfe_workspace" "workspace" {
   tag_names      = var.tags
   queue_all_runs = false
   auto_apply     = true
+  speculative_enabled = true
+
   vcs_repo {
     identifier     = var.repo
     branch         = var.branch
