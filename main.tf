@@ -4,9 +4,10 @@ data "tfe_outputs" "tfc-configs" {
 }
 
 resource "tfe_workspace" "workspace" {
-  name         = var.workspace_name
-  organization = var.tf_org
-  tag_names    = var.tags
+  name           = var.workspace_name
+  organization   = var.tf_org
+  tag_names      = var.tags
+  queue_all_runs = false
   vcs_repo {
     identifier     = var.repo
     branch         = var.branch
