@@ -4,11 +4,11 @@ data "tfe_outputs" "tfc-configs" {
 }
 
 resource "tfe_workspace" "workspace" {
-  name           = var.workspace_name
-  organization   = var.tf_org
-  tag_names      = var.tags
-  queue_all_runs = false
-  auto_apply     = true
+  name                = var.workspace_name
+  organization        = var.tf_org
+  tag_names           = var.tags
+  queue_all_runs      = false
+  auto_apply          = true
   speculative_enabled = true
 
   vcs_repo {
